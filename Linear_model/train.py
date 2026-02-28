@@ -14,6 +14,6 @@ predictions = reg.predict(X_test)
 def mse(y_test, predictions):
     return np.mean((y_test-predictions)**2)
 
-mse = mse(y_test, predictions)
-print(mse)
+Mean_s_error = mse(y_test, predictions)
+print(Mean_s_error)
 
