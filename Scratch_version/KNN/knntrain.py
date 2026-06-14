@@ -20,11 +20,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap, edgecolors='k', s=20 )
 # plt.show()
 
-clf = KNN(k=5)
-clf.fit(X_train, y_train)
-predictions = clf.predict(X_test)
 
-# print(predictions)
-acc = np.sum(predictions == y_test)/ len(y_test)
-print(acc)
+if __name__ == "__main__":
+    
+    clf = KNN(k=5)
+    clf.fit(X_train, y_train)
+    predictions = clf.predict(X_test)
+
+    # print(predictions)
+    acc = np.sum(predictions == y_test)/ len(y_test)
+    print(acc)
 
