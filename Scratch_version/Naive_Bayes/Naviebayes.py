@@ -9,7 +9,7 @@ class NaiveBayes:
 
         self._mean = np.zeros((n_classes, n_features), dtype=np.float64)
         self._var = np.zeros((n_classes, n_features), dtype=np.float64)
-        self._prior = np.zeros(n_samples, dtype=np.float64)
+        self._prior = np.zeros(n_classes, dtype=np.float64)
 
         for idx, c in enumerate(self._classes):
             X_c = X[y==c]
